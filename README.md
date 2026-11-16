@@ -4,15 +4,23 @@
 
 ## 安装
 
-解压发布包或下载仓库，把整个 `home-renovation` 目录放到 Codex 工作区的 `.agents/skills/` 下。保留目录结构，确保入口位于 `.agents/skills/home-renovation/SKILL.md`。在该工作区打开新会话，输入 `$home-renovation` 后写你的问题。
+本项目使用 [Agent Skills 开放规范](https://agentskills.io/specification)。解压发布包或下载仓库，将根目录命名为 `home-renovation`，保留其中的 `SKILL.md` 和 `references/`，再把整个目录放到客户端的项目技能目录下。
 
-技能源文件是 Markdown。查当前规则、市场报价或公司时，运行环境需要能检索公开网页。审扫描 PDF 或图片表格时，运行环境需要能查看 PDF 原页或渲染预览。缺页或看不清的金额会列作待核对。
+| 客户端 | 项目内入口 | 使用方式 |
+| --- | --- | --- |
+| Codex | `.agents/skills/home-renovation/SKILL.md` | 输入 `$home-renovation` |
+| Claude Code | `.claude/skills/home-renovation/SKILL.md` | 输入 `/home-renovation` |
+| Cursor | `.agents/skills/home-renovation/SKILL.md` | 在 Agent 的技能列表中选中 `home-renovation` |
+
+安装后，在该项目中打开新会话。Codex 已做装修场景验证。Claude Code 和 Cursor 的安装路径依据官方文档，装修场景仍待实测。其他客户端按各自的 Agent Skills 安装说明放置同一份目录。
+
+装修模式比较、公司筛选清单、沟通话术和台账可用本地资料完成。查现行规则、当地行情或具体公司需要联网，离线时会列出待核验项和查询渠道。审扫描 PDF 或图片表格需要查看原页，无法查看时可补清晰截图或表格。看不清的金额列作待核对。
 
 ## 直接试用
 
-- `$home-renovation` 我是毛坯交付，第一次装修，只能周末到场，想自选瓷砖和洁具。帮我比较全包、半包和独立设计师加工长。
-- `$home-renovation` 这两份报价哪些项目可以直接比？帮我找漏项，复算已知总价，再列签约前要问的三件事。
-- `$home-renovation` 原台账和新验收记录在附件里。帮我更新净增项、实付和本期应付，并给我一段能发给工长的回复。
+- 我是毛坯交付，第一次装修，只能周末到场，想自选瓷砖和洁具。帮我比较全包、半包和独立设计师加工长。
+- 这两份报价哪些项目可以直接比？帮我找漏项，复算已知总价，再列签约前要问的三件事。
+- 原台账和新验收记录在附件里。帮我更新净增项、实付和本期应付，并给我一段能发给工长的回复。
 
 如需连续跟进，保存装修台账。换会话时把台账与新凭证一并提供。
 
@@ -22,4 +30,4 @@
 
 默认面向中国大陆住宅。报价、物业要求和验收依据随地区与项目变化。涉及现场测量和专业判断的事项，由项目对应人员核查。
 
-版本为 v0.1.0 预览版。采用 [MIT 许可证](LICENSE)。
+采用 [MIT 许可证](LICENSE)。

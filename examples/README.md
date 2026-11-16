@@ -2,8 +2,8 @@
 
 全部输入均为虚构材料，金额仅用于验算。
 
-1. 用新会话读取 [比价输入](quotes.md)，提问「用 `$home-renovation` 比较两家目前有依据的价格，给优先约谈对象和报价反转条件」。
-2. 用另一个新会话读取 [旧台账](ledger-before.md) 和 [新增凭证](new-evidence.md)，提问「用 `$home-renovation` 更新台账，核对本期应付和重复单据」。
+1. 在新会话启用 `home-renovation`，提供 [比价输入](quotes.md)，提问「比较两家目前有依据的价格，给优先约谈对象和报价反转条件」。
+2. 在另一个新会话启用 `home-renovation`，提供 [旧台账](ledger-before.md) 和 [新增凭证](new-evidence.md)，提问「更新台账，核对本期应付和重复单据」。
 
 | 检查 | 预期结果 |
 | --- | --- |
